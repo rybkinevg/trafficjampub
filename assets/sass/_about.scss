@@ -1,0 +1,29 @@
+.about {
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 50%;
+        overflow: hidden;
+
+    }
+
+    &__text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        height: 100%;
+        color: var(--main-color);
+        background-color: var(--text-color);
+    }
+
+    &__img {
+        display: block;
+        max-width: 100%;
+        object-fit: cover;
+    }
+}

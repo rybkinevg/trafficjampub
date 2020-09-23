@@ -1,0 +1,33 @@
+.special {
+
+    &__content {
+        position: relative;
+    }
+
+    &__desc {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: 0;
+        width: 45%;
+        background-color: var(--text-color);
+        color: var(--main-color);
+        padding: 30px;
+        z-index: 2;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+    }
+
+    &__img-wrapper {
+        overflow: hidden;
+        position: relative;
+        width: 60%;
+        height: 500px;
+        background: grey;
+        margin-left: auto;
+    }
+
+    &__img {
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
