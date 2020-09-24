@@ -74,12 +74,17 @@
     </header>
     <main class="main">
         <section class="section hero">
-            <div class="hero__img-first"></div>
-            <div class="hero__img-second"></div>
+            <div class="hero__img hero__img-first"></div>
+            <div class="hero__img hero__img-second"></div>
             <div class="container">
                 <div class="content hero__content">
                     <h1 class="visually-hidden">Traffic Jam Pub</h1>
-                    <div class="logo-block"></div>
+                    <div class="logo-block">
+                        <picture>
+                            <source media="(max-width:900px)" srcset="./assets/img/tj-logo-mob.png">
+                            <img class="logo" src="./assets/img/tj-logo.png" alt="">
+                        </picture>
+                    </div>
                     <button class="btn btn-reserve">Забронировать стол</button>
                 </div>
             </div>
@@ -180,6 +185,10 @@
                             </div>
                         </article>
                     </div>
+                    <div class="section__footer">
+                        <a href="#" class="btn">Посмотреть полное меню</a>
+                        <a href="#" class="btn">Открыть меню в PDF</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -274,6 +283,20 @@
                 <div class="section__title">
                     Галерея
                 </div>
+                <div class="gallery__content">
+                    <div class="gallery__item">
+                        <img class="gallery__img" src="./assets/img/menu-2.jpg" alt="">
+                    </div>
+                    <div class="gallery__item">
+                        <img class="gallery__img" src="./assets/img/menu-2.jpg" alt="">
+                    </div>
+                    <div class="gallery__item gallery__item-big">
+                        <img class="gallery__img" src="./assets/img/menu-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="section__footer">
+                    <a href="#" class="btn">Перейти в галерею</a>
+                </div>
             </div>
         </section>
         <section class="section review">
@@ -320,21 +343,46 @@
                         </div>
                     </div>
                 </div>
-                <div class="review__content">
-                    <p>Были у нас ? Оставьте отзыв !</p>
-                    <button class="btn btn-review">Отставить отзыв</button>
+                <div class="section__footer">
+                    <button class="btn btn-review">Оставить отзыв</button>
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer">
-
+        <section class="section contacts">
+            <div class="section__title">
+                Контакты
+            </div>
+            <div class="contacts__content">
+                <div id="map"></div>
+                <div class="contacts-block">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores quasi doloribus tempore nihil
+                        temporibus perferendis animi, dignissimos rem molestias dolorum.
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores quasi doloribus tempore nihil
+                        temporibus perferendis animi, dignissimos rem molestias dolorum.
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores quasi doloribus tempore nihil
+                        temporibus perferendis animi, dignissimos rem molestias dolorum.
+                    </p>
+                </div>
+            </div>
+            <div class="copyright">
+                Traffic Jam Pub 2020
+            </div>
+        </section>
     </footer>
     <div class="popups">
 
     </div>
     <script src="./assets/lib/jquery/jquery-3.5.1.min.js"></script>
     <script src="./assets/lib/slick/slick.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=<f24289be-603b-44e6-a559-cff12316ffd8>"
+        type="text/javascript"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 

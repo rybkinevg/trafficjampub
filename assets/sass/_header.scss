@@ -1,7 +1,8 @@
 .header {
-    background-color: #000;
+    background-color: var(--main-color);
     position: fixed;
     width: 100%;
+    z-index: 3;
 
     &__content {
         display: flex;

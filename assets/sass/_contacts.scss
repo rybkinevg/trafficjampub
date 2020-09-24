@@ -1,0 +1,23 @@
+.contacts {
+
+    &__content {
+        display: flex;
+    }
+
+    &-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        background: var(--text-color);
+        color: var(--main-color);
+        border-left: 3px solid var(--secondary-color);
+        padding: 30px;
+    }
+}
+
+#map {
+    width: 50%;
+    height: 350px;
+}

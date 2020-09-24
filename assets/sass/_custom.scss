@@ -45,3 +45,25 @@
 p {
     margin-bottom: 20px;
 }
+
+.btn {
+    outline: none;
+    border: 1px solid var(--secondary-color);
+    background: transparent;
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.section__footer {
+    text-align: center;
+    padding: 20px 0;
+
+    & a,
+    & button {
+        display: inline-block;
+    }
+}
