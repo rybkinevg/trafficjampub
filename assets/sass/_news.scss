@@ -1,4 +1,50 @@
-.news-carousel__item {
-    border: 1px solid red;
-    height: 400px;
+.news-carousel {
+
+    &__item {
+        position: relative;
+        min-height: 400px;
+        background-image: url("../img/menu-2.jpg");
+        background-position: center;
+        background-size: cover;
+        outline-color: var(--secondary-color);
+    
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba($color: #000000, $alpha: 0.6);
+            z-index: 1;
+        }
+    }
+
+    &__inner {
+        position: absolute;
+        bottom: 0;
+        padding: 30px;
+        z-index: 2;
+    }
+
+    &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+    }
+
+    &__time {
+        display: inline-block;
+        padding: 5px 10px;
+        background: var(--secondary-color);
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        line-height: 1.5rem;
+    }
 }

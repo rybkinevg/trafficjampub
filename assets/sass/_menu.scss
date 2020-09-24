@@ -1,0 +1,35 @@
+.menu-carousel {
+    margin: 0 -10px;
+}
+
+.menu-item {
+    margin: 0 10px;
+    
+
+    &__img-wrapper {
+        overflow: hidden;
+    }
+
+    &__img {
+        display: block;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    &__title {
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    &__price {
+        display: inline-block;
+
+        &:after {
+            content: "\20BD";
+            font-size: 18px;
+            display: inline-block;
+            margin-left: 10px;
+            color: var(--secondary-color);
+        }
+    }
+}

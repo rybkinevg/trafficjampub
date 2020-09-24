@@ -1,0 +1,56 @@
+.blockquote {
+    position: relative;
+    padding: 35px 75px;
+
+    &:before {
+        top: -40px;
+        left: 0;
+        content: "“";
+    }
+
+    &:after {
+        bottom: -30px;
+        right: 0;
+        content: "”";
+    }
+
+    &:before,
+    &:after {
+        line-height: 200px;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        font-size: 14.6875rem;
+        color: var(--secondary-color);
+        opacity: 0.1;
+    }
+
+    &-wrapper {
+        padding: 50px 0;
+    }
+
+    &__text {
+        text-align: center;
+        line-height: 1.5rem;
+    }
+
+    &__footer {
+        text-align: center;
+        color: var(--subtext-color);
+        position: relative;
+        padding-top: 20px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            display: block;
+            width: 20%;
+            height: 3px;
+            background: var(--secondary-color);
+            opacity: 0.1;
+        }
+    }
+}
