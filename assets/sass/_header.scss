@@ -13,6 +13,8 @@
     &__contacts {
         margin-bottom: 20px;
         opacity: 1;
+        color: var(--subtext-color);
+        font-size: 0.8rem;
 
         & .horizontal-list {
             display: flex;

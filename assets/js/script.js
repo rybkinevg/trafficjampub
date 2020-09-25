@@ -1,21 +1,50 @@
 $(document).ready(function () {
 
-    $('.news-carousel').slick({
-        arrows: false,
-        slidesToShow: 4,
-        dots: true
-    });
-
     $('.menu-carousel').slick({
         arrows: false,
         slidesToShow: 3,
-        dots: true
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    $('.news-carousel').slick({
+        arrows: false,
+        slidesToShow: 4,
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     $('.review-carousel').slick({
         arrows: false,
         slidesToShow: 1,
-        dots: true
+        dots: true,
+        adaptiveHeight: true
     });
 
     ymaps.ready(init);

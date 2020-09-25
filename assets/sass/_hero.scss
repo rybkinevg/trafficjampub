@@ -73,6 +73,7 @@
     top: 0;
     left: 0;
     z-index: 1;
+    will-change: transform, opacity;
 }
 
 .hero__img-first {
@@ -90,6 +91,10 @@
 }
 
 .logo {
-    width: 100%;
+    width: 80%;
     margin-bottom: 40px;
+
+    &-block {
+        text-align: center;
+    }
 }
