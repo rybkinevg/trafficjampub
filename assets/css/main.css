@@ -529,7 +529,7 @@ p {
   position: absolute;
   font-size: 14.6875rem;
   color: var(--secondary-color);
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
 .blockquote-wrapper {
@@ -559,7 +559,7 @@ p {
   width: 20%;
   height: 3px;
   background: var(--secondary-color);
-  opacity: 0.1;
+  opacity: 0.3;
 }
 
 .review__content {
