@@ -96,8 +96,12 @@ html, body {
   margin: 0 15px;
 }
 
-p {
+.has-p p {
   margin-bottom: 20px;
+}
+
+.has-p p:last-child {
+  margin-bottom: 0;
 }
 
 .btn {
@@ -182,6 +186,10 @@ p {
 
 .header__nav-menu .list-item:last-child {
   margin-right: 0;
+}
+
+.burger-button {
+  display: none;
 }
 
 .hero {
@@ -677,6 +685,62 @@ p {
 }
 
 @media (max-width: 768px) {
+  .header__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header__contacts {
+    margin-bottom: 0;
+  }
+  .header__contacts .horizontal-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__nav-menu {
+    display: none;
+  }
+  .burger-button {
+    display: block;
+  }
+  .about__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about__item {
+    width: 100%;
+  }
+  .about__item:nth-child(1) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .about__item:nth-child(2) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .about__item:nth-child(3) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .about__item:nth-child(4) {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .about__img {
+    height: 200px;
+  }
   .special__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -702,6 +766,12 @@ p {
 }
 
 @media (max-width: 600px) {
+  .about__item:nth-child(3) {
+    display: none;
+  }
+  .about__item:nth-child(4) {
+    display: none;
+  }
   .special__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
