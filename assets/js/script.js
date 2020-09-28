@@ -59,6 +59,9 @@ $(document).ready(function () {
         if (body.hasClass('menu-open')) {
             body.removeClass('menu-open');
         }
+        if ($('.burger-item').hasClass('open')) {
+            $('.burger-item').removeClass('open');
+        }
         var el = $(this);
         var dest = el.attr('href');
         if (dest !== undefined && dest !== '') {
