@@ -24,6 +24,10 @@ html, body {
   background: url("../img/body.jpg") 0 0/cover no-repeat fixed;
 }
 
+.body.menu-open, .body.modal-open {
+  overflow: hidden;
+}
+
 @font-face {
   font-family: 'Montserrat';
   src: url("../fonts/montserrat-100-normal.woff2") format("woff2"), url("../fonts/montserrat-100-normal.woff") format("woff");
@@ -67,6 +71,18 @@ html, body {
   color: inherit;
 }
 
+.link-text {
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 2px;
+  -webkit-transition: color 0.2s, border-bottom 0.1s;
+  transition: color 0.2s, border-bottom 0.1s;
+}
+
+.link-text:hover {
+  color: var(--secondary-color);
+  border-bottom: none;
+}
+
 .horizontal-list .list-item {
   display: inline-block;
 }
@@ -83,7 +99,7 @@ html, body {
           justify-content: center;
   font-weight: bold;
   font-size: 1.7rem;
-  padding: 60px 0 30px 0;
+  padding: 90px 0 30px 0;
   text-align: center;
 }
 
@@ -209,6 +225,7 @@ html, body {
 .menu-open .header__nav-menu {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
+  opacity: 1;
 }
 
 .burger-button {
@@ -723,6 +740,58 @@ html, body {
   background: var(--main-color);
 }
 
+.modals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 12;
+  background: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+}
+
+.body.open-modal .modals {
+  visibility: visible;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0.7);
+          transform: translate(-50%, -50%) scale(0.7);
+  width: 500px;
+  height: auto;
+  padding: 30px;
+  background: var(--main-color);
+  border-top: 2px solid var(--secondary-color);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.body.open-modal {
+  overflow: hidden;
+}
+
+.body.modal-review .modal__review {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.body.modal-reserve .modal__reserve {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
 .slick-slide {
   outline: none;
 }
@@ -796,21 +865,24 @@ html, body {
     background: var(--main-color);
     -webkit-transform: translate(-100%, 0);
             transform: translate(-100%, 0);
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: -webkit-transform 0.2s;
-    transition: transform 0.2s;
-    transition: transform 0.2s, -webkit-transform 0.2s;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.3s;
+    transition: opacity 0.2s, -webkit-transform 0.3s;
+    transition: transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s, -webkit-transform 0.3s;
   }
   .header__nav-menu .horizontal-list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    line-height: 2rem;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
   }
   .burger-button {
     display: block;
     z-index: 20;
+    cursor: pointer;
   }
   .about__content {
     -webkit-box-orient: vertical;

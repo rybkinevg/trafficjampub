@@ -41,32 +41,32 @@
                 <nav class="header__nav-menu">
                     <ul class="horizontal-list">
                         <li class="list-item">
-                            <a href="#" class="link">
+                            <a href="#about" class="link scroll-link">
                                 О нас
                             </a>
                         </li>
                         <li class="list-item">
-                            <a href="#" class="link">
+                            <a href="#menu" class="link scroll-link">
                                 Меню
                             </a>
                         </li>
                         <li class="list-item">
-                            <a href="#" class="link">
+                            <a href="#news" class="link scroll-link">
                                 Новости
                             </a>
                         </li>
                         <li class="list-item">
-                            <a href="#" class="link">
+                            <a href="#gallery" class="link scroll-link">
                                 Галерея
                             </a>
                         </li>
                         <li class="list-item">
-                            <a href="#" class="link">
+                            <a href="#reviews" class="link scroll-link">
                                 Отзывы
                             </a>
                         </li>
                         <li class="list-item">
-                            <a href="#" class="link">
+                            <a href="#contacts" class="link scroll-link">
                                 Контакты
                             </a>
                         </li>
@@ -88,11 +88,11 @@
                             <img class="logo" src="./assets/img/tj-logo.png" alt="">
                         </picture>
                     </div>
-                    <button class="btn btn-fill btn-reserve">Забронировать стол</button>
+                    <button class="btn btn-fill" data-modal="reserve">Забронировать стол</button>
                 </div>
             </div>
         </section>
-        <section class="section about">
+        <section id="about" class="section about">
             <div class="container">
                 <h2 class="section__title">
                     О нас
@@ -144,7 +144,7 @@
                 </div>
             </div>
         </section>
-        <section class="section menu">
+        <section id="menu" class="section menu">
             <div class="container">
                 <h2 class="section__title">
                     Лучшие позиции меню
@@ -217,7 +217,7 @@
                 </article>
             </div>
         </section>
-        <section class="section news">
+        <section id="news" class="section news">
             <h2 class="section__title">
                 Новости
             </h2>
@@ -281,7 +281,7 @@
                 </div>
             </div>
         </section>
-        <section class="section gallery">
+        <section id="gallery" class="section gallery">
             <div class="container">
                 <h2 class="section__title">
                     Галерея
@@ -302,7 +302,7 @@
                 </div>
             </div>
         </section>
-        <section class="section review">
+        <section id="reviews" class="section review">
             <div class="container">
                 <h2 class="section__title">
                     Отзывы
@@ -347,13 +347,13 @@
                     </div>
                 </div>
                 <div class="section__footer">
-                    <button class="btn btn-border btn-review">Оставить отзыв</button>
+                    <button class="btn btn-border" data-modal="review">Оставить отзыв</button>
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer">
-        <section class="section contacts">
+        <section id="contacts" class="section contacts">
             <h2 class="section__title">
                 Контакты
             </h2>
@@ -370,21 +370,34 @@
                         Время работы: Ежедневно, с 11:00 до 23:00
                     </p>
                     <p>
-                        По вопросам организации банкетов писать на почту <nobr>trafficjampub@yandex.ru</nobr> или
+                        По вопросам организации банкетов писать на почту <nobr><a href="mailto:trafficjampub@yandex.ru"
+                                class="link link-text">trafficjampub@yandex.ru</a></nobr> или
                         звонить по
-                        телефонам <nobr>8 (903) 184-34-90</nobr> и <nobr>8 (499) 257-64-09</nobr>
+                        телефонам <nobr><a href="tel:89031843490" class="link link-text">8 (903) 184-34-90</a></nobr> и
+                        <nobr><a href="tel:84992576409" class="link link-text">8 (499) 257-64-09</a></nobr>
                     </p>
-                    <button class="btn btn-fill btn-reserve">Забронировать стол</button>
+                    <button class="btn btn-fill" data-modal="reserve">Забронировать стол</button>
                 </div>
             </div>
             <div class="copyright">
-                Traffic Jam Pub 2020
+                &copy; Traffic Jam Pub 2020
             </div>
         </section>
     </footer>
-    <div class="popups">
-        <div class="reserve-popup">
-
+    <div class="modals">
+        <div class="modal modal__reserve">
+            <div class="modal__inner">
+                <h3 class="h3">Забронировать</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem illum quidem sunt, vero veritatis
+                    facilis veniam culpa beatae distinctio unde.</p>
+            </div>
+        </div>
+        <div class="modal modal__review">
+            <div class="modal__inner">
+                <h3 class="h3">Были у нас ? Оставьте отзыв</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem illum quidem sunt, vero veritatis
+                    facilis veniam culpa beatae distinctio unde.</p>
+            </div>
         </div>
     </div>
     <script src="./assets/lib/jquery/jquery-3.5.1.min.js"></script>

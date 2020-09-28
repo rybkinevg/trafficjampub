@@ -55,10 +55,30 @@ $(document).ready(function () {
         body.toggleClass('menu-open');
     });
 
-    headerLink.on('click', function (e) {
-        e.preventDefault();
+    $('.scroll-link').on('click', function () {
         if (body.hasClass('menu-open')) {
             body.removeClass('menu-open');
+        }
+        var el = $(this);
+        var dest = el.attr('href');
+        if (dest !== undefined && dest !== '') {
+            $('html').animate({
+                scrollTop: $(dest).offset().top
+            }, 500
+            );
+        }
+        return false;
+    });
+
+    $('.btn').on('click', function () {
+        if ($(this).attr('data-modal') == 'reserve') {
+            body.addClass('open-modal modal-reserve');
+        }
+        else if ($(this).attr('data-modal') == 'review') {
+            body.addClass('open-modal modal-review');
+        }
+        else if ($(this).attr('data-modal') == 'close') {
+            body.removeClass().addClass('body');
         }
     });
 

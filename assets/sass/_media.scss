@@ -22,7 +22,6 @@
         }
 
         &__nav-menu {
-            //display: none;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -33,11 +32,13 @@
             height: 100%;
             background: var(--main-color);
             transform: translate(-100%, 0);
-            transition: transform 0.2s;
+            opacity: 0;
+            transition: transform 0.3s, opacity 0.2s;
 
             & .horizontal-list {
                 flex-direction: column;
-                line-height: 2rem;
+                font-size: 1.7rem;
+                line-height: 2.5rem;
             }
         }
     }
@@ -45,6 +46,7 @@
     .burger-button {
         display: block;
         z-index: 20;
+        cursor: pointer;
     }
 
     .about__content {

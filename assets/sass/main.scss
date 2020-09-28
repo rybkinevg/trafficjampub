@@ -20,7 +20,12 @@ html, body {
 
 .body {
     position: relative;
-    background: url("../img/body.jpg") 0 0/cover no-repeat fixed
+    background: url("../img/body.jpg") 0 0/cover no-repeat fixed;
+
+    &.menu-open,
+    &.modal-open {
+        overflow: hidden;
+    }
 }
 
 @import "fonts";
@@ -35,5 +40,6 @@ html, body {
 @import "gallery";
 @import "contacts";
 @import "copyright";
+@import "modals";
 @import "slick";
 @import "media";
