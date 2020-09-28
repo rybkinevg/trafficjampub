@@ -1,0 +1,45 @@
+.modals {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 12;
+    background: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+}
+
+.body.open-modal .modals {
+    visibility: visible;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    width: 500px;
+    height: auto;
+    padding: 30px;
+    background: var(--main-color);
+    border-top: 2px solid var(--secondary-color);
+    transition: transform 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.body.open-modal {
+    overflow: hidden;
+}
+
+.body.modal-review .modal__review {
+    visibility: visible;
+    opacity: 1;
+    transform:  translate(-50%, -50%)scale(1);
+}
+
+.body.modal-reserve .modal__reserve {
+    visibility: visible;
+    opacity: 1;
+    transform:  translate(-50%, -50%)scale(1);
+}
