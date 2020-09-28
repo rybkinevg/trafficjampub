@@ -60,47 +60,64 @@
     opacity: 1;
 }
 
-.burger{
-    &-button {
-        display: none;
-        position: relative;
-        width: 35px;
-        height: 35px;
-        outline: none;
-        padding: 0;
-        appearance: none;
-        border: 2px solid var(--secondary-color);
-        background: rgba(207, 20, 43, 0.2);
-        text-align: center;
+.burger-button {
+    display: none;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    outline: none;
+    padding: 0;
+    appearance: none;
+    border: 2px solid var(--secondary-color);
+    background: rgba(207, 20, 43, 0.2);
+    text-align: center;
+}
+
+.burger-item {
+    height: 2px;
+    width:80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50px;
+    background-color: var(--secondary-color);
+    transform: translate(-50%,-50%) rotate(0deg);
+    transition: all ease 0.4s;
+
+    &::before,
+    &::after {
+        content:"";
+        position: absolute;
+        height: inherit;
+        border-radius: inherit;
+        background-color: inherit;
+        margin: auto;
+        width: 50%;
+        transition: all ease 0.4s;
     }
 
-    &-item {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: block;
-        width: 80%;
-        height: 2px;
-        background: var(--secondary-color);
+    &::before {
+        top: -6px;
+        left: 0;
+        transform-origin: left;
+    }
 
-        &:before,
-        &:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            background: var(--secondary-color);
-        }
+    &::after {
+        bottom:-6px;
+        right: 0;
+        transform-origin: right;
+    }
+}
 
-        &:before {
-            top: -6px;
-            left: 0;
-        }
+.open {
+    transform:translate(-50%,-50%) rotate(135deg);
 
-        &:after {
-            bottom: -6px;
-            left: 0;
-        }
+    &::before {
+        top:0;
+        transform: translateX(100%) rotate(-90deg);
+    }
+    &::after {
+        bottom:0;
+        transform: translateX(-100%) rotate(-90deg);
     }
 }

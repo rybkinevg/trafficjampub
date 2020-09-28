@@ -49,10 +49,10 @@ $(document).ready(function () {
 
     const body = $('.body');
     const menuBtn = $('.burger-button');
-    const headerLink = $('.header__nav-menu .link');
 
     menuBtn.on('click', function () {
         body.toggleClass('menu-open');
+        $('.burger-item').toggleClass('open');
     });
 
     $('.scroll-link').on('click', function () {
