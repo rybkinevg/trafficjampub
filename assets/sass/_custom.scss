@@ -55,18 +55,30 @@
 
 .btn {
     outline: none;
-    border: 1px solid var(--secondary-color);
-    background: rgba(207, 20, 43, 0.1);
     padding: 10px 20px;
     color: var(--text-color);
     font-size: 1.1rem;
     cursor: pointer;
     text-decoration: none;
     font-family: inherit;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
 
-    &:hover {
+    &-fill {
         background: var(--secondary-color);
+        border: none;
+
+        &:hover {
+            background: var(--main-color);
+        }
+    }
+
+    &-border {
+        border: 1px solid var(--secondary-color);
+        background: rgba(207, 20, 43, 0.1);
+
+        &:hover {
+            background: var(--secondary-color);
+        }
     }
 }
 
@@ -79,4 +91,10 @@
         display: inline-block;
         margin: 10px;
     }
+}
+
+.h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
