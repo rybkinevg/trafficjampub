@@ -127,13 +127,13 @@ html, body {
 .link-text {
   border-bottom: 2px solid var(--secondary-color);
   padding-bottom: 2px;
-  -webkit-transition: color 0.2s, border-bottom 0.1s;
-  transition: color 0.2s, border-bottom 0.1s;
+  -webkit-transition: color 0.3s, border-bottom 0.3s;
+  transition: color 0.3s, border-bottom 0.3s;
 }
 
 .link-text:hover {
   color: var(--secondary-color);
-  border-bottom: none;
+  border-bottom: 2px solid transparent;
 }
 
 .horizontal-list .list-item {

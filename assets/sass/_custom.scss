@@ -19,11 +19,11 @@
     &-text {
         border-bottom: 2px solid var(--secondary-color);
         padding-bottom: 2px;
-        transition: color 0.2s, border-bottom 0.1s;
+        transition: color 0.3s, border-bottom 0.3s;
 
         &:hover {
             color: var(--secondary-color);
-            border-bottom: none;
+            border-bottom: 2px solid transparent;
         }
     }
 }
