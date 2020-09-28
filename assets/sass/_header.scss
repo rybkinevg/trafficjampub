@@ -1,13 +1,27 @@
 .header {
-    background-color: var(--main-color);
+    background-color: transparent;
     position: fixed;
     width: 100%;
     z-index: 3;
+    transition: background 0.3s, padding 0.3s, margin-bottom 0.3s;
+
+    &.scrolled {
+        background-color: var(--main-color);
+
+        & .header__content {
+            padding: 15px 0;
+        }
+
+        & .header__contacts {
+            margin-bottom: 10px;
+        }
+    }
 
     &__content {
         display: flex;
         flex-direction: column;
         padding: 20px 0;
+        transition: padding 0.3s;
     }
 
     &__contacts {
@@ -15,6 +29,7 @@
         opacity: 1;
         color: var(--subtext-color);
         font-size: 0.8rem;
+        transition: margin-bottom 0.3s;
 
         & .horizontal-list {
             display: flex;

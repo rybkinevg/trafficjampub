@@ -82,6 +82,10 @@ $(document).ready(function () {
         }
     });
 
+    $(window).on("scroll", function () {
+        1 <= $(this).scrollTop() ? $(".header").addClass("scrolled") : $(".header").removeClass("scrolled")
+    })
+
     ymaps.ready(init);
 
     function init() {

@@ -8,9 +8,19 @@
 
 @media (max-width: 768px) {
     .header {
+
+        &.scrolled {
+            & .header__content {
+                padding: 10px 0;
+            }
+            & .header__contacts {
+                margin-bottom: 0;
+            }
+        }
         &__content {
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
         }
 
         &__contacts {
@@ -18,6 +28,7 @@
 
             & .horizontal-list {
                 flex-direction: column;
+                line-height: 1.5rem;
             }
         }
 
@@ -41,6 +52,10 @@
                 line-height: 2.5rem;
             }
         }
+    }
+
+    .main {
+        padding-top: 112px;
     }
 
     .burger-button {
@@ -162,14 +177,35 @@
             height: 100%;
         }
     }
+
+    .modal {
+        max-width: 90%;
+        margin: 0 auto;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .header {
         background: transparent;
+
+        &.scrolled {
+            background: transparent;
+
+            & .header__content {
+                padding: 15px 0;
+            }
+        }
+
+        &__content {
+            padding: 15px 0;
+        }
 
         &__contacts {
             display: none;
         }
+    }
+
+    .main {
+        padding-top: 0;
     }
 }
