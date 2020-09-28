@@ -1182,4 +1182,7 @@ html, body {
   .main {
     padding-top: 0;
   }
+  .section__title {
+    padding: 60px 0 30px 0;
+  }
 }
