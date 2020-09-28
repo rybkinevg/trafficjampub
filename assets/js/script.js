@@ -47,6 +47,21 @@ $(document).ready(function () {
         adaptiveHeight: true
     });
 
+    const body = $('.body');
+    const menuBtn = $('.burger-button');
+    const headerLink = $('.header__nav-menu .link');
+
+    menuBtn.on('click', function () {
+        body.toggleClass('menu-open');
+    });
+
+    headerLink.on('click', function (e) {
+        e.preventDefault();
+        if (body.hasClass('menu-open')) {
+            body.removeClass('menu-open');
+        }
+    });
+
     ymaps.ready(init);
 
     function init() {
