@@ -77,6 +77,10 @@ html, body {
   color: var(--secondary-color);
 }
 
+.icon-window-close:before {
+  content: '\f2d3';
+}
+
 .icon-facebook-circled:before {
   content: '\e800';
 }
@@ -796,6 +800,24 @@ html, body {
   margin-bottom: 20px;
 }
 
+.contacts__item {
+  margin-bottom: 20px;
+}
+
+.contacts__item .link-text {
+  white-space: nowrap;
+}
+
+.contacts__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts__social i:before {
+  font-size: 2.5rem;
+}
+
 .map-wrapper {
   width: 50%;
 }
@@ -808,7 +830,6 @@ html, body {
 .copyright {
   text-align: center;
   line-height: 50px;
-  background: var(--main-color);
 }
 
 .modals {
@@ -863,7 +884,7 @@ html, body {
 }
 
 .modal__header .btn {
-  padding: 5px;
+  padding: 0;
   color: var(--secondary-color);
   background: transparent;
   border: none;

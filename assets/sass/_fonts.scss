@@ -48,6 +48,7 @@
     color: var(--secondary-color);
 }
 
+.icon-window-close:before { content: '\f2d3'; }
 .icon-facebook-circled:before { content: '\e800'; }
 .icon-phone:before { content: '\e801'; }
 .icon-location:before { content: '\e802'; }
