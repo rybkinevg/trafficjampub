@@ -24,15 +24,6 @@
 
         &__price {
             display: inline-block;
-
-            &:after {
-                content: "Р";
-                font-weight: bold;
-                font-size: 18px;
-                display: inline-block;
-                margin-left: 5px;
-                color: var(--secondary-color);
-            }
         }
     }
 }

@@ -572,15 +572,6 @@ html, body {
   display: inline-block;
 }
 
-.menu-item__price:after {
-  content: "Р";
-  font-weight: bold;
-  font-size: 18px;
-  display: inline-block;
-  margin-left: 5px;
-  color: var(--secondary-color);
-}
-
 .news-carousel__item {
   position: relative;
   min-height: 400px;
@@ -852,6 +843,32 @@ html, body {
   transition: transform 0.3s, -webkit-transform 0.3s;
   opacity: 0;
   visibility: hidden;
+}
+
+.modal__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.modal__header .h3 {
+  margin-bottom: 0;
+}
+
+.modal__header .btn {
+  padding: 5px;
+  color: var(--secondary-color);
+  background: transparent;
+  border: none;
+  outline: none;
+  font-weight: bold;
 }
 
 .body.open-modal {
