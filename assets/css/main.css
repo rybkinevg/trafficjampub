@@ -183,6 +183,7 @@ html, body {
 }
 
 .btn {
+  display: inline-block;
   outline: none;
   padding: 10px 20px;
   color: var(--text-color);
