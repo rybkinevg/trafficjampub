@@ -193,6 +193,9 @@ html, body {
   font-family: inherit;
   -webkit-transition: background 0.3s, color 0.3s;
   transition: background 0.3s, color 0.3s;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .btn-fill {

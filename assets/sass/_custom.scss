@@ -79,6 +79,7 @@
     text-decoration: none;
     font-family: inherit;
     transition: background 0.3s, color 0.3s;
+    appearance: none;
 
     &-fill {
         background: var(--secondary-color);
