@@ -187,7 +187,7 @@ html, body {
   padding: 10px 20px;
   color: var(--text-color);
   font-size: 1.1rem;
-  line-height: 1.1rem;
+  line-height: 100%;
   cursor: pointer;
   text-decoration: none;
   font-family: inherit;
@@ -197,6 +197,7 @@ html, body {
      -moz-appearance: none;
           appearance: none;
   text-align: center;
+  margin: 0;
 }
 
 .btn-fill {
@@ -1213,11 +1214,5 @@ html, body {
   }
   .modal {
     padding: 20px;
-  }
-  .modal__footer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 }
