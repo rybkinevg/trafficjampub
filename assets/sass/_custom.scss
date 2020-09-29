@@ -70,7 +70,6 @@
 }
 
 .btn {
-    display: inline-block;
     outline: none;
     padding: 10px 20px;
     color: var(--text-color);
@@ -81,6 +80,7 @@
     font-family: inherit;
     transition: background 0.3s, color 0.3s;
     appearance: none;
+    text-align: center;
 
     &-fill {
         background: var(--secondary-color);
@@ -108,7 +108,7 @@
     & a,
     & button {
         display: inline-block;
-        margin: 10px;
+        margin: 0 10px;
     }
 }
 

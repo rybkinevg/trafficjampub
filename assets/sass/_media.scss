@@ -213,7 +213,16 @@
         padding: 60px 0 30px 0;
     }
 
+    .section__footer a,
+    .section__footer button {
+        margin: 10px 0;
+    }
+
     .modal {
         padding: 20px;
+
+        &__footer {
+            flex-direction: column;
+        }
     }
 }
