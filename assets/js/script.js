@@ -81,9 +81,18 @@ $(document).ready(function () {
             body.addClass('open-modal modal-review');
         }
         else if ($(this).attr('data-modal') == 'close') {
+            if ($(this).hasClass('btn-agree')) {
+                Cookies.set('agreed', 'true');
+            }
             body.removeClass().addClass('body');
         }
     });
+
+    const cookie = Cookies.get('agreed');
+
+    if (!cookie) {
+        body.addClass('open-modal modal-adult');
+    }
 
     $(window).on("scroll", function () {
         1 <= $(this).scrollTop() ? $(".header").addClass("scrolled") : $(".header").removeClass("scrolled")

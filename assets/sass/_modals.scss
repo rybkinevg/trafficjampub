@@ -46,6 +46,12 @@
             font-weight: bold;
         }
     }
+
+    &__footer {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
 }
 
 .body.open-modal {
@@ -59,6 +65,12 @@
 }
 
 .body.modal-reserve .modal__reserve {
+    visibility: visible;
+    opacity: 1;
+    transform:  translate(-50%, -50%)scale(1);
+}
+
+.body.modal-adult .modal__adult {
     visibility: visible;
     opacity: 1;
     transform:  translate(-50%, -50%)scale(1);

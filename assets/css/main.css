@@ -920,6 +920,16 @@ html, body {
   font-weight: bold;
 }
 
+.modal__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
 .body.open-modal {
   overflow: hidden;
 }
@@ -932,6 +942,13 @@ html, body {
 }
 
 .body.modal-reserve .modal__reserve {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.body.modal-adult .modal__adult {
   visibility: visible;
   opacity: 1;
   -webkit-transform: translate(-50%, -50%) scale(1);
